@@ -16,8 +16,7 @@ Breaking any of the following rules will result in elimination from the competit
 
 # Questions
 
-Practice connecting to our network!
-
+> Practice connecting to our network!
 
 This task has no anwer needed.
 

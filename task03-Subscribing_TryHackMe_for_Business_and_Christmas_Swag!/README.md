@@ -24,8 +24,7 @@ We have a special edition Christmas Advent of Cyber [t-shirt](https://store.tryh
 
 # Questions
 
-Read the above.
-
+> Read the above.
 
 This task has no anwer needed.
 

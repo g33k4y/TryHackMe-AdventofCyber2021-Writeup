@@ -50,7 +50,7 @@ Topics that will be covered in the event are:
 
 # Questions
 
-Read the above and checkout the sponsors
+> Read the above and checkout the sponsors
 
 This task has no answer needed.
 

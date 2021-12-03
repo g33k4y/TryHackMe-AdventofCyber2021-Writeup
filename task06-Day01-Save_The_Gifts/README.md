@@ -79,27 +79,27 @@ Clicking on the **Revert** button on the user's actions will roll back the chang
 
 # Questions
 
-After finding Santa's account, what is their position in the company?
+> After finding Santa's account, what is their position in the company?
 
 Answer: **The Boss!**
 
-After finding McStocker's account, what is their position in the company?
+> After finding McStocker's account, what is their position in the company?
 
 Answer: **Build Manager**
 
-After finding the account responsible for tampering, what is their position in the company?
+> After finding the account responsible for tampering, what is their position in the company?
 
 Answer: **Mischief Manager**
 
-What is the received flag when McSkidy fixes the Inventory Management System?
+> What is the received flag when McSkidy fixes the Inventory Management System?
 
 Answer: **THM{AOC_IDOR_2B34BHI3}**
 
-If you want to learn more about IDOR vulnerabilities, we suggest trying out this room https://tryhackme.com/room/idor
+> If you want to learn more about IDOR vulnerabilities, we suggest trying out this room https://tryhackme.com/room/idor
 
 **No Answer Needed**
 
-Tasks released each day get progressively harder (but are still guided with walkthrough videos). Come back tomorrow for Day 2's task!
+>Tasks released each day get progressively harder (but are still guided with walkthrough videos). Come back tomorrow for Day 2's task!
 
 **No Answer Needed**
 
