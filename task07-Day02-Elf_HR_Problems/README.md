@@ -79,7 +79,7 @@ Cookie values may seem random at first; however, they often have an encoded valu
 
 From an attacker's perspective, you can decode the cookie value to identify the underlying objects. Once you have identified the underlying objects, you can modify them to what you want. To use the cookie, you will need to encode it back to the original encoding and replace the cookie value. Below is an example of a decoded cookie value.
 
-`{firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"`
+`{firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}`
 
 Now that we have all of the pieces of cookies and how to manipulate them, we can put them all together to gain unintended access.
 
