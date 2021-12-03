@@ -1,6 +1,6 @@
 # Welcome to Advent of Cyber 2021
 
-> Get started with Cyber Security in 25 days, by learning the basics and completing a new, beginner friendly security exercise every day leading up until Christmas; an advent calendar but with security challenges and not chocolate.
+Get started with Cyber Security in 25 days, by learning the basics and completing a new, beginner friendly security exercise every day leading up until Christmas; an advent calendar but with security challenges and not chocolate.
 
 ## Prizes & Certificate
 We have over $19,000 worth of prizes! In this event, points don't matter but the number of questions you answer does. For each task you get correct, you get a raffle ticket and on the 26th December, we will choose the winners randomly using everyone's raffle tickets; the more questions you answer, the more chance you have of winning. Here are the prizes up for grabs:
@@ -19,9 +19,9 @@ We have over $19,000 worth of prizes! In this event, points don't matter but the
 - [2x HAK5 Rubber Ducky ($100)](https://shop.hak5.org/collections/sale/products/usb-rubber-ducky-deluxe)
 - [15x TryHackMe Subscriptions ($150)](https://tryhackme.com/why-subscribe)
 
-> Total Prize Pool Value: $19,121
+Total Prize Pool Value: $19,121
 
-> Also, everyday you complete a challenge, you get entered into another prize draw for the chance to win a mini-prize. The "daily prizes" are done at the end of the week. Complete every task in the event and earn a certificate of completion! Make sure your name is set in your settings.
+Also, everyday you complete a challenge, you get entered into another prize draw for the chance to win a mini-prize. The "daily prizes" are done at the end of the week. Complete every task in the event and earn a certificate of completion! Make sure your name is set in your settings.
 
 ## View Sample Certificate
 
@@ -29,18 +29,18 @@ We have over $19,000 worth of prizes! In this event, points don't matter but the
 
 ## Our Sponsors
 
-> In the spirit of Christmas, we've brought together some of the biggest names in cyber security and are ecstatic that they're supporting the event by sponsoring prizes!
+In the spirit of Christmas, we've brought together some of the biggest names in cyber security and are ecstatic that they're supporting the event by sponsoring prizes!
 
 ![](./sponsors.png)
 
 ## Videos Featuring
 
-> Each task released has a supporting video walkthrough, from a range of amazing and highly talented creators, including:  
-> CyberSecMeg, John Hammond, Tib3rius, Neal Bridges, HuskyHacks, InsiderPhD, and NahamSec!
+Each task released has a supporting video walkthrough, from a range of amazing and highly talented creators, including:  
+CyberSecMeg, John Hammond, Tib3rius, Neal Bridges, HuskyHacks, InsiderPhD, and NahamSec!
 
 ## Topics Include
 
-> Topics that will be covered in the event are:
+Topics that will be covered in the event are:
 
 - Web Exploitation  
 - Network Exploitation  
@@ -50,7 +50,7 @@ We have over $19,000 worth of prizes! In this event, points don't matter but the
 
 # Questions
 
-> Read the above and checkout the sponsors
+Read the above and checkout the sponsors
 
 This task has no answer needed.
 
