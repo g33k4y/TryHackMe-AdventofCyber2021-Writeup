@@ -4,7 +4,7 @@
 
 The inventory management systems used to create the gifts have been tampered with to frustrate the elves. It's a night shift, and McStocker comes to McSkidy panicking about the gifts all being built wrong. With no managers around to fix the issue, McSkidy needs to somehow get access and fix the system and keep everything on track to be ready for Christmas!
 
-## Learaning Objectives
+## Learning Objectives
 
 1. What is an IDOR vulnerability?
 2. How do I find and exploit IDOR vulnerabilities?
