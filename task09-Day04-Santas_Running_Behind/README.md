@@ -94,12 +94,6 @@ If you are interested in learning more about Burp Suite, check out the [Burp Sui
 
 ---
 
-## Additional Resources
-
-If you are interested in learning more  (or wish to apply your knowledge) about content discovery and authentication bypass, check out the following rooms on TryHackMe:  
-- [Content Discovery](https://tryhackme.com/jr/contentdiscovery)
-- [Authentication Bypass  ](https://tryhackme.com/jr/authenticationbypass)
-
 
 # Questions
 
