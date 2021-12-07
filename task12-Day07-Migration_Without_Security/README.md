@@ -45,57 +45,27 @@ Also, it is useful to briefly look at and compare the query [operators](https://
 
 Before we dive into the details of NoSQL injection, it is important to understand how MongoDB works in a general sense. Let's start with connecting to MongoDB on our deployed target machine using the default port `27017`. We will be creating a new database and collections as well as documents. 
 
-`mongo connect`  
-> user@machine$ mongo connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb Implicit session: session { "id" : UUID("1273eab2-4dae-42a8-8f67-a133b870872b") } MongoDB server version: 4.4.10
+![](./res/sample2.png)
 
 Now let's use the `show` command to list all the databases that we have in MongoDB on our target machine:
 
-`show databases`  
-> admin 0.000GB config 0.000GB local 0.000GB logindb 0.000GB thm-test 0.000GB thmdb 0.000GB
+![](./res/sample3.png)
 
 Next, if we want to connect to a database, we can do this by using the `use` command. However, we will also show how to create a new database with collections and data. To create a new database, we also use the same `use` command to create and connect to it. Therefore, the use command is used to connect to a database if it exists or create a new one if it doesn't exist. Once the database is created, we can create two new collections, named users and roles using the `db.createCollection()` function, and then show all available collections within the database.
 
-`use AoC3`  
-> switched to db AoC3  
-
-`db.createCollection("users")`  
-> { "ok" : 1 }  
-
-`db.createCollection("roles")`  
-> { "ok" : 1 }  
-
-`db.getCollectionNames();`  
-> [ "roles", "users" ]
+![](./res/sample4.png)
 
 Next, we create a document within the `users` collection and insert data into it.
 
-`db.users.insert({id:"1", username: "admin", email: "admin@thm.labs", password: "idk2021!"})`  
-> WriteResult({ "nInserted" : 1 })  
-
-`db.users.insert({id:"2", username: "user", email: "user@thm.labs", password: "password1!"})`  
-> WriteResult({ "nInserted" : 1 })
-
-`db.users.find()`  
-> { "_id" : ObjectId("6183dc871ebe3f0c4b779a31"), "id" : "1", "username" : "admin", "email" : "admin@thm.labs", "password" : "idk2021!" } { "_id" : ObjectId("6183dc911ebe3f0c4b779a32"), "id" : "2", "username" : "user", "email" : "user@thm.labs", "password" : "password1!" }
+![](./res/sample5.png)
 
 We successfully created two documents into `users` collection and then showed available documents within the collection using `db.users.find()`. Note that MongoDB automatically creates a unique ID called `_id` for each document within the collection from the above output. Let's also try to update the document as well as delete it using MongoDB commands. We will be using the `db.<collection>.update` function to update the document with `id=2` and update the username to be `tryhackme` and finally shows all documents to make sure our document gets updated.
 
-`db.users.update({id:"2"}, {$set: {username: "tryhackme"}});`  
-> WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
-
-`db.users.find()`  
-> { "_id" : ObjectId("6183dc871ebe3f0c4b779a31"), "id" : "1", "username" : "admin", "email" : "admin@thm.labs", "password" : "idk2021!" } { "_id" : ObjectId("6183dc911ebe3f0c4b779a32"), "id" : "2", "username" : "tryhackme", "email" : "user@thm.labs", "password" : "password1!" }
+![](./res/sample6.png)
 
 Finally, let's remove the document using `db.users.remove()`  and then drop `db.users.drop()` the collection as follows,
 
-`db.users.remove({'id':'2'})`  
-> WriteResult({ "nRemoved" : 1 })
-
-`db.users.find()`  
-> { "_id" : ObjectId("6183dc871ebe3f0c4b779a31"), "id" : "1", "username" : "admin", "email" : "admin@thm.labs", "password" : "idk2021!" }
-
-`db.users.drop()`  
-> true
+![](./res/sample7.png)
 
 Now that we know how to interact with the MongoDB server, look around by using the MongoDB commands we've learned, and find the flag to answer Question 1!
 
@@ -108,11 +78,7 @@ Now that we have the basic knowledge of dealing with MongoDB commands to create 
 The logic of login pages is similar in most databases: first, connect to the database and then look for a certain username and password; if they exist in the collection (in the database), then we have a valid entry. The following is the query that is used in the web applications used on our login page:  `db.users.find({query})` or `db.users.findOne(query)` functions where the `query` is JSON data that's send via the application: `{"username": "admin", "password":"adminpass"}`. Note that when we provide the correct credentials, a document returns, while a `null` reply is received when providing the wrong credentials when nothing matches!
 
 
-`db.users.findOne({username: "admin", password: "adminpass"})`  
-> { "_id" : ObjectId("6183ef6292dea43d75f0c820"), "id" : "1", "username" : "admin", "email" : "admin@thm.labs", "password" : "adminpass" }
-
-`db.users.findOne({username: "admin", password: "adminpasss"})`  
-> null
+![](./res/sample8.png)
 
 Before exploiting the NoSQL injection, there are MongoDB operators that we need to be familiar with that are heavily used in the injections, which are:
 
@@ -125,8 +91,7 @@ Before exploiting the NoSQL injection, there are MongoDB operators that we need 
 
 Visit the [MongoDB website](https://docs.mongodb.com/manual/reference/operator/query/) for more information about the MongoDB operators. Next, we will be exploiting the logic of the login query by injecting a JSON object which includes one of the NoSQL operators, which is `$ne`. 
 
-`db.users.findOne({username: "admin", password: {"$ne":"xyz"}})`  
-> { "_id" : ObjectId("6183ef6292dea43d75f0c820"), "id" : "1", "username" : "admin", "email" : "admin@thm.labs", "password" : "adminpass" }
+![](./res/sample9.png)
 
 We injected a JSON objection `{"$ne": "XYZ"}`  in the password field, and we changed the logic to become as follows:
 
@@ -136,8 +101,7 @@ As a result, we have successfully retrieved the document from MongoDB since our 
 
 Now let's say if we wanted to log in to a system as another user who is not admin. In this case, we can also inject into a username field to be as follows,
 
-`db.users.findOne({username:{"$ne":"admin"},password:{"$ne":"xyz"}})`  
-> { "_id" : ObjectId("6183ef5b92dea43d75f0c81f"), "id" : "2", "username" : "user", "email" : "user@thm.labs", "password" : "password1!" }
+![](./res/sample10.png)
 
 If this were a login page, we would be logged in as a not `admin`, which is the `user`. We injected two JSON objects into a username as well as password fields: we are telling MongoDB to find a document that its username is `not equal to admin` and its password is `not equal to xyz`, which returns the statement as true.
 
