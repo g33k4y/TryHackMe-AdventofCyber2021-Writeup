@@ -48,8 +48,8 @@ Answer: **1433**
 > 
 > A simple syntax would be `sqsh -S server -U username -P password`, where:
 > 
-> `-S server` is used to specify the server, for example -S MACHINE_IP
-> `-U username` is used to provide the username; for example, -U sa is the username that we have enabled.
+> `-S server` is used to specify the server, for example -S MACHINE_IP  
+> `-U username` is used to provide the username; for example, -U sa is the username that we have enabled.  
 > `-P password` lets us specify the password.
 > 
 > Let’s try to run, `sqsh -S MACHINE_IP -U sa -P t7uLKzddQzVjVFJp`
@@ -112,9 +112,9 @@ Using the AttackBox, enter the command: `nmap -Pn <VULNERABLE_MACHINE_IP>`
 
 ![](./res/answer1.png)
 
-The open ports are: `22`, `135`, `1433`, and `3389`. One of them is related to MS SQL server, which is port `1433`
+The open ports are: `22`, `135`, `1433`, and `3389`. One of them is related to MS SQL server, which is port `1433`.
 
-Now run another command: `sqsh -S <VULNERABLE_MACHINE_IP> -U sa -P t7uLKzddQzVjVFJpS `  
+Now run another command for Qn2: `sqsh -S <VULNERABLE_MACHINE_IP> -U sa -P t7uLKzddQzVjVFJpS `  
 
 ![](./res/answer2.png)
 
