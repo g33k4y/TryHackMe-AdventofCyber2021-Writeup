@@ -86,6 +86,8 @@ For Qn5, run the following commands:
 Use back the following commands to find answer to Qn6:  
 `showmount -e <MACHINE_IP>`
 
+![](./res/answer2.png)
+
 For Qn7, run the following commands:  
 `mkdir confidential`
 `mount <MACHINE_IP>:/confidential confidential`  
