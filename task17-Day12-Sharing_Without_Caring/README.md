@@ -89,7 +89,7 @@ Use back the following commands to find answer to Qn6:
 ![](./res/answer2.png)
 
 For Qn7, run the following commands:  
-`mkdir confidential`
+`mkdir confidential`  
 `mount <MACHINE_IP>:/confidential confidential`  
 `md5sum confidential/ssh/id_rsa`
 
