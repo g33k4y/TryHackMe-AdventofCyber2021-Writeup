@@ -14,3 +14,17 @@ Read these success stories, and see how TryHackMe has helped people get a career
 - [Paul](https://tryhackme.com/resources/blog/construction-worker-to-security-engineer-how-paul-used-tryhackme-to-land-his-first-job-in-security) - From construction worker to security engineer
 - [Kassandra](https://tryhackme.com/resources/blog/the-teacher-becomes-the-student) - The teacher becomes the student, from school teacher to security professional
 - [Kenny](https://tryhackme.com/resources/blog/kennys-success-story) - From IT Manager to Security Analyst
+
+_There is no video for today._
+
+---
+## Questions
+
+
+> Complete the quiz, and share what cyber security career was recommended on Twitter, LinkedIn, Instagram or Facebook!
+
+**No Answer Needed**
+
+> Enroll in a TryHackMe learning path that was shown on the career quiz!
+
+**No Answer Needed**
