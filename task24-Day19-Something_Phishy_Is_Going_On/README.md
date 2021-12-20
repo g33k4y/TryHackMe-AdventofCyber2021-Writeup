@@ -108,6 +108,10 @@ Answer: **password-reset-instructions.pdf**
 
 Answer: **THM{A0C_Thr33_Ph1sh1ng_An4lys!s}**
 
+> If you want to learn more about phishing, check out the ["Phishing" module](https://tryhackme.com/module/phishing) on TryHackMe.
+
+**No Answer Needed**
+
 ===============================================================================
 
 Deploy the Machine attached to this task.
