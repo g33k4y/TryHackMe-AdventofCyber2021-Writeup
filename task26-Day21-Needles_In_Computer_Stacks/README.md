@@ -141,6 +141,3 @@ Qn4. Run the following command to read Yara help:
 Qn5. Change `$a` to `X50` and use `$a and $b and $c and $d` as condition, and run the following command:  
 `yara -c eicaryara testfile`
 ![](./res/answer5.png)  
-
-
-
